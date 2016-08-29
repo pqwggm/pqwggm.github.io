@@ -1,0 +1,700 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="为什么选择hexo前段时间发现github pages功能，可以用来托管个人的blog(-_-|| 果然是小白，什么都不懂)，一般可以通过github+jekyll+markdown或者github+hexo+markdown来完成这个事。捣鼓了一阵jekyll之后，发现还是Hexo的主题更加酷一点，于是选择了hexo，之前用vmware安装了ubuntu虚拟机，那好，在ubuntu下面完成这件事">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo blog的建立">
+<meta property="og:url" content="https://pqwggm.github.io/2016/08/26/Hexo-blog的建立/index.html">
+<meta property="og:site_name" content="PureGreat Blog">
+<meta property="og:description" content="为什么选择hexo前段时间发现github pages功能，可以用来托管个人的blog(-_-|| 果然是小白，什么都不懂)，一般可以通过github+jekyll+markdown或者github+hexo+markdown来完成这个事。捣鼓了一阵jekyll之后，发现还是Hexo的主题更加酷一点，于是选择了hexo，之前用vmware安装了ubuntu虚拟机，那好，在ubuntu下面完成这件事">
+<meta property="og:updated_time" content="2016-08-27T18:58:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo blog的建立">
+<meta name="twitter:description" content="为什么选择hexo前段时间发现github pages功能，可以用来托管个人的blog(-_-|| 果然是小白，什么都不懂)，一般可以通过github+jekyll+markdown或者github+hexo+markdown来完成这个事。捣鼓了一阵jekyll之后，发现还是Hexo的主题更加酷一点，于是选择了hexo，之前用vmware安装了ubuntu虚拟机，那好，在ubuntu下面完成这件事">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Hexo blog的建立 | PureGreat Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?b72adefdfd3b5f032709ddfa75602dbc";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">PureGreat Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="https://pqwggm.github.io/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="https://pqwggm.github.io/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="https://pqwggm.github.io/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="https://pqwggm.github.io/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hexo blog的建立
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-26T17:18:06-07:00" content="2016-08-27">
+              2016-08-27
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/26/Hexo-blog的建立/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/26/Hexo-blog的建立/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="为什么选择hexo"><a href="#为什么选择hexo" class="headerlink" title="为什么选择hexo"></a>为什么选择hexo</h2><p>前段时间发现github pages功能，可以用来托管个人的blog(-_-|| 果然是小白，什么都不懂)，一般可以通过github+jekyll+markdown或者github+hexo+markdown来完成这个事。捣鼓了一阵jekyll之后，发现还是Hexo的主题更加酷一点，于是选择了hexo，之前用vmware安装了ubuntu虚拟机，那好，在ubuntu下面完成这件事吧。</p>
+<a id="more"></a>
+<h2 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h2><p>1.安装git（只需要一条命令，自行百度～）<br>2.安装node.js和npm<br>3.安装hexo和部署</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h3><p>nodejs在<a href="https://npm.taobao.org/mirrors/node" target="_blank" rel="external">这里</a>下载，我选择的是node-v6.4.0-linux-x64.tar.xz，将它复制到/opt目录下；<br>进入/opt目录，输入命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">tar -xJf node-v6.4.0-linux-x64.tar.xz	将文件解压到当前目录</div><div class="line">mv node-v6.4.0-linux-x64 node		将文件改名为node</div></pre></td></tr></table></figure></p>
+<p>输入命令：vim /etc/profile，在末尾添加以下三行：<br>export NODE_HOME=/opt/node<br>export PATH=$PATH:$NODE_HOME/bin<br>export NODE_PATH=$NODE_HOME/lib/node_modules<br>之后按Esc键，并输入“：wq!”命令保存配置并推出<br>（如果没有安装vim，用gedit也可以）</p>
+<p>在命令行输入：source /etc/profile，然后在命令行输入：node -v，返回版本信息6.4.0，说明环境变量配置就生效了；但你会发现进入root账户，改配置并没有生效，解决的方法就是：在命令行输入：vim /root/.bashrc,并在文件末尾加入一行source etc/profile命令，保存。</p>
+<p>另外，安装npm和node命令到系统命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo ln -s /opt/node/bin/node /usr/local/bin/node </div><div class="line">sudo ln -s /opt/node/bin/npm /usr/local/bin/npm</div></pre></td></tr></table></figure></p>
+<p>可以通过“node -v”和“npm -v”验证是否生效。</p>
+<h3 id="安装hexo和初始化"><a href="#安装hexo和初始化" class="headerlink" title="安装hexo和初始化"></a>安装hexo和初始化</h3><p>安装hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g hexo</div></pre></td></tr></table></figure></p>
+<p>-g表示全局安装</p>
+<p>初始化博客的根目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo init &lt;dir&gt;		&lt;dir&gt;为博客的根目录</div><div class="line">npm install</div><div class="line">hexo server</div></pre></td></tr></table></figure></p>
+<p>通过这三条指令，就可以在ubuntu的浏览器中输入<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> 本地查看hexo博客。</p>
+<h3 id="导入NexT主题"><a href="#导入NexT主题" class="headerlink" title="导入NexT主题"></a>导入NexT主题</h3><p>参考<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">NexT使用文档</a>，按照它做，基本上就可以将NexT主题导入。</p>
+<h3 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h3><p>参考<a href="https://hexo.io/zh-cn/docs/deployment.html" target="_blank" rel="external">hexo deployment</a>。<br>我这里填上自己的repository: <a href="https://github.com/pqwggm/pqwggm.github.io.git" target="_blank" rel="external">https://github.com/pqwggm/pqwggm.github.io.git</a></p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>由于github采用的是安全链接https，所以在博客根目录theme/_config.yml下的menu有点问题，部署到github之后，点击menu的链接，提示找不到页面。<br>我这里的处理方法直接把它们的url改为绝对路径<br>(我的blog地址为:<a href="https://pqwggm.github.io)。">https://pqwggm.github.io)。</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: /</div><div class="line">  archives: https://pqwggm.github.io/archives/</div><div class="line">  categories: https://pqwggm.github.io/categories/</div><div class="line">  tags: https://pqwggm.github.io/tags/</div><div class="line">  about: https://pqwggm.github.io/about/</div><div class="line">  #commonweal: /404.html</div></pre></td></tr></table></figure></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>【1】<a href="http://jingyan.baidu.com/article/25648fc18ee5bd9190fd0058.html?st=2&amp;os=0&amp;bd_page_type=1&amp;net_type=1" target="_blank" rel="external">Linux(ubuntu16.04)下安装nodejs及配置环境变量</a><br>【2】<a href="http://blog.csdn.net/caib1109/article/details/51804687" target="_blank" rel="external">Ubuntu 16.04 64位 搭建 node.js NodeJS 环境</a><br>【3】<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">NexT使用文档</a><br>【4】<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">hexo中文开发文档</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat_reward.png" alt="PureGreat WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay_reward.jpg" alt="PureGreat Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/26/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/27/潮汕灯谜积累/" rel="prev" title="潮汕灯谜积累">
+                潮汕灯谜积累 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/26/Hexo-blog的建立/"
+           data-title="Hexo blog的建立" data-url="https://pqwggm.github.io/2016/08/26/Hexo-blog的建立/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/pqw.jpg"
+               alt="PureGreat" />
+          <p class="site-author-name" itemprop="name">PureGreat</p>
+          <p class="site-description motion-element" itemprop="description">Hope is a good thing.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="https://pqwggm.github.io/archives/">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="https://pqwggm.github.io/categories/">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="https://pqwggm.github.io/tags/">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/pqwggm" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/panqingwei" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么选择hexo"><span class="nav-number">1.</span> <span class="nav-text">为什么选择hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件"><span class="nav-number">2.</span> <span class="nav-text">条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤"><span class="nav-number">3.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装nodejs"><span class="nav-number">3.1.</span> <span class="nav-text">安装nodejs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装hexo和初始化"><span class="nav-number">3.2.</span> <span class="nav-text">安装hexo和初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入NexT主题"><span class="nav-number">3.3.</span> <span class="nav-text">导入NexT主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署到github"><span class="nav-number">3.4.</span> <span class="nav-text">部署到github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题"><span class="nav-number">3.5.</span> <span class="nav-text">问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">PureGreat</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"pqwggm1"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
